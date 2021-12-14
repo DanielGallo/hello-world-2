@@ -28,6 +28,7 @@ version = "2021.2"
 
 project {
 
+    buildType(Deploy)
     buildType(Build)
 }
 
@@ -48,4 +49,12 @@ object Build : BuildType({
         vcs {
         }
     }
+})
+
+object Deploy : BuildType({
+    name = "Deploy"
+
+    enablePersonalBuilds = false
+    type = BuildTypeSettings.Type.DEPLOYMENT
+    maxRunningBuilds = 1
 })
