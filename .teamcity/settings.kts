@@ -63,4 +63,9 @@ object Deploy : BuildType({
             scriptContent = "npm deploy"
         }
     }
+
+    dependencies {
+        snapshot(Build) {
+        }
+    }
 })
