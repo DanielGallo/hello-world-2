@@ -57,4 +57,10 @@ object Deploy : BuildType({
     enablePersonalBuilds = false
     type = BuildTypeSettings.Type.DEPLOYMENT
     maxRunningBuilds = 1
+
+    steps {
+        script {
+            scriptContent = "npm deploy"
+        }
+    }
 })
