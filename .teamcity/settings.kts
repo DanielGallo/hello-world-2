@@ -28,7 +28,10 @@ version = "2021.2"
 
 project {
 
-    buildType(Deploy)
+    if (DslContext.getParameter("Deploy", false).equals(true)) {
+        buildType(Deploy)
+    }
+
     buildType(Build)
 }
 
